@@ -11,7 +11,7 @@ def get_csv_filenames(directory):
     return csv_filenames
 
 def extract_suffix(filename):
-    no_extension = filename.rsplit('.csv', 1)[0]
+    no_extension = filename.split('.csv', 1)[0]
     return no_extension.rsplit('-', 1)[1]
 
 csv_path = "./各地の気温・降水量2022/*.csv"

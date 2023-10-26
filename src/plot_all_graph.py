@@ -1,15 +1,13 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import glob
-import numpy as np
-import math
 import os
-import re
+
 def get_csv_filenames(directory):
     all_files = os.listdir(directory)
     csv_filenames = [os.path.splitext(file)[0] for file in all_files if file.endswith('.csv')]
     return csv_filenames
-
+# 都市名を取得する関数
 def extract_suffix(filename):
     no_extension = filename.rsplit('.csv', 1)[0]
     return no_extension.rsplit('-', 1)[1]
