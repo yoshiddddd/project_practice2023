@@ -17,7 +17,7 @@ dir_path = "./各地の気温・降水量2022/"
 csv_list = glob.glob(csv_path)
 file_names = get_csv_filenames(dir_path)
 number = 0
-fig, axarr = plt.subplots(nrows=len(csv_list), ncols=1, figsize=(10, 10))  # 5行1列のサブプロットを作成
+fig, axarr = plt.subplots(nrows=len(csv_list), ncols=1, figsize=(10, 9))  # 5行1列のサブプロットを作成
 for ax in axarr:
     ax2 = ax.twinx()
     read_csv_file = pd.read_csv(csv_list[number])
@@ -29,7 +29,7 @@ for ax in axarr:
     month = df.columns
     temper_value = df.iloc[0].astype(float)
     rain_value = df.iloc[1].astype(float)
-    temp_arr = [0,10,20,30]
+    temp_arr = [0,12,24,36]
     rain_arr = [0,200,400,600]
     ax.plot(month,temper_value,color = "brown",marker = 'o',label = temper_label)
     ax2.bar(month,rain_value,label = rain_label)

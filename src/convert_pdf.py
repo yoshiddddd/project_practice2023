@@ -1,10 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import glob
-import numpy as np
-import math
 import os
-import re
 def get_csv_filenames(directory):
     all_files = os.listdir(directory)
     csv_filenames = [os.path.splitext(file)[0] for file in all_files if file.endswith('.csv')]
@@ -35,7 +32,7 @@ for files in csv_list:
     # rain_max = rain_value.max()+100
     # temp_min = temper_value.min()-5
     # temp_max = temper_value.max()+15
-    temp_arr = [0,10,20,30]
+    temp_arr = [0,12,24,36]
     rain_arr = [0,200,400,600]
     # temp_arr = np.linspace(temp_min,temp_max,4)
     # rain_arr = np.linspace(rain_min,rain_max,4)
